@@ -1,0 +1,107 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #eeeeee;
+}
+
+header {
+    padding: 10px;
+    background-color: rgb(1, 22, 29);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+
+.mic-icon {
+    background-color: rgb(255, 0, 140);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 25px;  
+}
+
+.listening{
+    animation: anim 1s linear infinite alternate;
+}
+
+@keyframes anim {
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+#menu-icon {
+    color: white;
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+.nav-menu {
+    height: 100vh;
+    width: 0;
+    background-color: rgb(1, 22, 29);
+    position: fixed;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.nav-menu > li {
+    list-style: none;
+    margin: 50px 25px;
+}
+
+.nav-menu > li > a {
+    text-decoration: none;
+}
+
+.nav-menu > li > a:hover {
+    color: white;
+}
+
+.show-nav {
+    width: 200px;
+}
+
+#info {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    background-color: #eeeeeebd;
+    border-radius: 20px;
+    padding: 5px 12px;
+    z-index: 100;
+    display: none;
+    color: #000;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#home {
+    background-color: rgb(102, 24, 67);
+}
+
+#about {
+    background-color: rgb(31, 15, 90);
+}
+
+#contact {
+    background-color: rgb(131, 4, 131);
+}
+
+footer {
+    background-color: rgb(31, 1, 17);
+    text-align: center;
+    padding: 30px;
+}
