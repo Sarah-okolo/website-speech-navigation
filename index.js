@@ -51,7 +51,6 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
   recognition.onend = () => {
     if(isListening == true){
       recognition.start();
-    //   mic.classList.add('listening');
     }
   }
 
@@ -97,10 +96,9 @@ if (window.SpeechRecognition || window.webkitSpeechRecognition) {
   recognition.onerror = (event) => {
     if (!errorHandled) {
         if (event.error == "network") {
-            console.log("network error");
-            recognition.stop();
-            isListening= false;
-            mic.classList.remove('listening'); 
+          recognition.stop();
+          isListening= false;
+          mic.classList.remove('listening'); 
         }
     }
     displayInfo(`Speech recognition error: ${event.error}`, "#800000");
